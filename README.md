@@ -22,6 +22,23 @@ VetApp is a web application designed to facilitate the management of a veterinar
 - Lombok
 - ModelMapper
 - Maven
+- Postman
+
+<a href="https://www.java.com" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> 
+  </a> 
+<a href="https://spring.io/" target="_blank" rel="noreferrer"> 
+    <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> 
+  </a> 
+<a href="https://postman.com" target="_blank" rel="noreferrer"> 
+    <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> 
+  </a> 
+<a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> 
+  </a> 
+<a href="https://search.maven.org/artifact/org.projectlombok/lombok" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/maven-central/v/org.projectlombok/lombok.svg?label=Maven%20Central" alt="Maven Central"/>
+</a>
 
 ## How to Use
 
