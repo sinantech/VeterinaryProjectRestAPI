@@ -32,8 +32,12 @@ public class AppointmentManager implements AppointmentService {
     @Override
     public Appointment addAppointments(Appointment appointment) { // Section 18 - Save an appointment
         // Check if the specified doctor and animal exist
-        if (!appointmentRepository.existsByDoctor_IdAndAnimal_Id(appointment.getDoctor().getId(), appointment.getAnimal().getId())) {
+        if (!doctorRepository.existsById(appointment.getDoctor().getId()) || !animalRepository.existsById(appointment.getAnimal().getId())) {
             throw new NotFoundException(Message.NOT_FOUND_ID);
+        }
+
+        if(!availableRepository.existsAvailableDateByDate(appointment.getDateTime().toLocalDate())){
+            throw new DoctorDaysConflictException(Message.DAYS_CONFLICT);
         }
         // Find the available date ID for the appointment's date and doctor
         long availableId = availableRepository.findByAvailableIdInEndDateAndDoctorId(appointment.getDateTime().toLocalDate(), appointment.getDoctor().getId());

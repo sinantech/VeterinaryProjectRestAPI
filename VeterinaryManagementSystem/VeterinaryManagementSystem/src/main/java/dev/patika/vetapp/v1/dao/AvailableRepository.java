@@ -12,6 +12,8 @@ import java.time.LocalDate;
 @Repository
 public interface AvailableRepository extends JpaRepository<AvailableDate, Long> {
 
+    boolean existsAvailableDateByDate(LocalDate date);
+
     boolean existsByDateAndDoctors_Id(LocalDate date, long id);
 
 
