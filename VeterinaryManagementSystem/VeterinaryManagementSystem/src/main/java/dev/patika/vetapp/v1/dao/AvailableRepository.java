@@ -25,7 +25,7 @@ public interface AvailableRepository extends JpaRepository<AvailableDate, Long> 
 
     AvailableDate findByDate(LocalDate date);
 
-    // Doctor ıd ve tarih ıd girilince available date liste çıkıyor id leri döndürüyor
+
     @Query("select a.id from AvailableDate a where a.date = :endDate and a.doctors.id = :doctorId")
     long findByAvailableIdInEndDateAndDoctorId(@Param("endDate") LocalDate endDate, @Param("doctorId") long doctorId);
 }
