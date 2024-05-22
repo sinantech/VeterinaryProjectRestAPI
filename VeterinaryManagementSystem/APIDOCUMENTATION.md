@@ -47,13 +47,13 @@ This document provides an overview of the API endpoints and their functions.
 
 ## Available Date Endpoints
 
-| Endpoint                              | HTTP Method | Description                                                  |
-|---------------------------------------|-------------|--------------------------------------------------------------|
-| /api/v1/availableDates/{id}           | GET         | Retrieve the available date with the specified ID.           |
-| /api/v1/availableDates/{id}           | PUT         | Update the available date with the specified ID.             |
-| /api/v1/availableDates/{id}           | DELETE      | Delete the available date with the specified ID.             |
-| /api/v1/availableDates                | GET         | Retrieve all available dates.                                |
-| /api/v1/availableDates                | POST        | Add a new available date.                                    |
+| Endpoint                     | HTTP Method | Description                                                  |
+|------------------------------|-------------|--------------------------------------------------------------|
+| /api/v1/available-dates/{id} | GET         | Retrieve the available date with the specified ID.           |
+| /api/v1/available-dates/{id} | PUT         | Update the available date with the specified ID.             |
+| /api/v1/available-dates/{id} | DELETE      | Delete the available date with the specified ID.             |
+| /api/v1/available-dates      | GET         | Retrieve all available dates.                                |
+| /api/v1/available-dates      | POST        | Add a new available date.                                    |
 
 ## Doctor Endpoints
 
