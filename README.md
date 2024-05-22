@@ -49,6 +49,7 @@ VetApp is a web application designed to facilitate the management of a veterinar
 4. Visit `http://localhost:8080/` in your browser to view the API documentation and test the APIs.
 5. Customize and extend the application using the features and modules suitable for your clinic.
 6. You can find examples and api documentation in VeterinaryManagementSystem folder.
+7. Also, you can visit http://localhost:8080/swagger-ui/index.html#/ address to use swagger.
 
 ## Contributing
 
