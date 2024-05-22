@@ -23,10 +23,10 @@ public class AvailableDateManager implements AvailableDateService {
 
     @Override
     public AvailableDate save(AvailableDate availableDate) { // Section 16 - Save doctor available day
-        if(doctorRepository.findById(availableDate.getDoctors().getId()).isEmpty()){
+        if (doctorRepository.findById(availableDate.getDoctors().getId()).isEmpty()) {
             throw new NotFoundDoctorException(Message.NOT_FOUND_DOCTOR);
         }
-        if(availableRepository.existsByDateAndDoctors_Id(availableDate.getDate(),availableDate.getDoctors().getId())){
+        if (availableRepository.existsByDateAndDoctors_Id(availableDate.getDate(), availableDate.getDoctors().getId())) {
             throw new SameValuesException(Message.SAME_VALUES);
         }
         return availableRepository.save(availableDate);
@@ -35,29 +35,34 @@ public class AvailableDateManager implements AvailableDateService {
 
     @Override
     public AvailableDate update(AvailableDate availableDate) {
-        if(appointmentRepository.existsByAvailableDate_Id(availableDate.getId())){
+        // Check if there are existing appointments for this available date
+        if (appointmentRepository.existsByAvailableDate_Id(availableDate.getId())) {
             throw new AppointmentAlreadyExists(Message.EXISTING_APPOINTMENT);
         }
-        availableRepository.findById(availableDate.getId()).orElseThrow(()-> new NotFoundException(Message.NOT_FOUND_ID));
-        if(doctorRepository.findById(availableDate.getDoctors().getId()).isEmpty()){
+        //Check if the specified available date exists in the repository
+        availableRepository.findById(availableDate.getId()).orElseThrow(() -> new NotFoundException(Message.NOT_FOUND_ID));
+        //Check if the specified doctor exists in the repository
+        if (doctorRepository.findById(availableDate.getDoctors().getId()).isEmpty()) {
             throw new NotFoundDoctorException(Message.NOT_FOUND_DOCTOR);
         }
-        if(availableRepository.existsByDateAndDoctors_Id(availableDate.getDate(),availableDate.getDoctors().getId())){
+        // Check if the same date and doctor combination already exists in the repository
+        if (availableRepository.existsByDateAndDoctors_Id(availableDate.getDate(), availableDate.getDoctors().getId())) {
             throw new SameValuesException(Message.SAME_VALUES);
         }
+        //Save the updated available date to the repository
         return availableRepository.save(availableDate);
     }
 
 
     @Override
     public AvailableDate getId(long id) {
-        return availableRepository.findById(id).orElseThrow(()-> new NotFoundException(Message.NOT_FOUND_ID));
+        return availableRepository.findById(id).orElseThrow(() -> new NotFoundException(Message.NOT_FOUND_ID));
     }
 
 
     @Override
     public boolean delete(long id) {
-        if(appointmentRepository.existsByAvailableDate_Id(id)){
+        if (appointmentRepository.existsByAvailableDate_Id(id)) {
             throw new AppointmentAlreadyExists(Message.EXISTING_APPOINTMENT);
         }
         availableRepository.delete(getId(id));

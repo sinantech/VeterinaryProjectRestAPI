@@ -35,7 +35,7 @@ public class AppointmentManager implements AppointmentService {
         if (!doctorRepository.existsById(appointment.getDoctor().getId()) || !animalRepository.existsById(appointment.getAnimal().getId())) {
             throw new NotFoundException(Message.NOT_FOUND_ID);
         }
-
+        // Check if the doctor is available on the specified date
         if(availableRepository.findByAvailableIdInEndDateAndDoctorId(appointment.getDateTime().toLocalDate(), appointment.getDoctor().getId()) == null){
             throw new DoctorDaysConflictException(Message.DAYS_CONFLICT);
         }
@@ -52,10 +52,12 @@ public class AppointmentManager implements AppointmentService {
                     }
                 }
             }
+            //Associate the appointment with the available date and save it
             AvailableDate availableDate = availableRepository.findById(availableId).orElseThrow();
             appointment.setAvailableDate(availableDate);
             return appointmentRepository.save(appointment);
         }
+        //If no available date is found, throw a conflict exception
         throw new DoctorDaysConflictException(Message.DAYS_CONFLICT);
     }
 
