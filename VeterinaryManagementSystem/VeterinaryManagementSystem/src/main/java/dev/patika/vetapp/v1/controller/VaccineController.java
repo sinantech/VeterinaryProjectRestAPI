@@ -1,6 +1,6 @@
-package dev.patika.vetapp.v1.api;
+package dev.patika.vetapp.v1.controller;
 
-import dev.patika.vetapp.v1.business.abstracts.VaccineService;
+import dev.patika.vetapp.v1.service.abstracts.VaccineService;
 import dev.patika.vetapp.v1.core.result.Result;
 import dev.patika.vetapp.v1.core.result.ResultData;
 import dev.patika.vetapp.v1.core.config.modelMapper.ModelMapperService;

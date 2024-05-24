@@ -1,6 +1,6 @@
-package dev.patika.vetapp.v1.business.concretes;
+package dev.patika.vetapp.v1.service.concretes;
 
-import dev.patika.vetapp.v1.business.abstracts.AvailableDateService;
+import dev.patika.vetapp.v1.service.abstracts.AvailableDateService;
 import dev.patika.vetapp.v1.core.exception.AppointmentAlreadyExists;
 import dev.patika.vetapp.v1.core.exception.NotFoundDoctorException;
 import dev.patika.vetapp.v1.core.exception.NotFoundException;

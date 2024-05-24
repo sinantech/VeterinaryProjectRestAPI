@@ -1,4 +1,4 @@
-package dev.patika.vetapp.v1.business.abstracts;
+package dev.patika.vetapp.v1.service.abstracts;
 
 import dev.patika.vetapp.v1.entities.Animal;
 

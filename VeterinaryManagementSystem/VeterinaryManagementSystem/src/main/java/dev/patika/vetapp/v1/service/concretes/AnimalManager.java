@@ -1,6 +1,6 @@
-package dev.patika.vetapp.v1.business.concretes;
+package dev.patika.vetapp.v1.service.concretes;
 
-import dev.patika.vetapp.v1.business.abstracts.AnimalService;
+import dev.patika.vetapp.v1.service.abstracts.AnimalService;
 import dev.patika.vetapp.v1.core.exception.ForUpdateNotFoundIdException;
 import dev.patika.vetapp.v1.core.exception.NotFoundObjectRequest;
 import dev.patika.vetapp.v1.core.exception.NotFoundCustomerException;

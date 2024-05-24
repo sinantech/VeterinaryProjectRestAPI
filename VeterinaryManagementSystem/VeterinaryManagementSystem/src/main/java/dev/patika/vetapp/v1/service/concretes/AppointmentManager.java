@@ -1,6 +1,6 @@
-package dev.patika.vetapp.v1.business.concretes;
+package dev.patika.vetapp.v1.service.concretes;
 
-import dev.patika.vetapp.v1.business.abstracts.AppointmentService;
+import dev.patika.vetapp.v1.service.abstracts.AppointmentService;
 import dev.patika.vetapp.v1.core.utilities.Message;
 import dev.patika.vetapp.v1.dao.AnimalRepository;
 import dev.patika.vetapp.v1.dao.AppointmentRepository;

@@ -1,6 +1,6 @@
-package dev.patika.vetapp.v1.business.concretes;
+package dev.patika.vetapp.v1.service.concretes;
 
-import dev.patika.vetapp.v1.business.abstracts.DoctorService;
+import dev.patika.vetapp.v1.service.abstracts.DoctorService;
 import dev.patika.vetapp.v1.core.exception.ForUpdateNotFoundIdException;
 import dev.patika.vetapp.v1.core.exception.NotFoundException;
 import dev.patika.vetapp.v1.core.exception.NotUniqueValues;
