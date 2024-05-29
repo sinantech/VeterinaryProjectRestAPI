@@ -1,4 +1,4 @@
-package dev.patika.vetapp.v1.core.config.exceptionHandler;
+package dev.patika.vetapp.v1.core.config.globalExceptionHandler;
 
 import dev.patika.vetapp.v1.core.exception.*;
 import dev.patika.vetapp.v1.core.result.Result;
