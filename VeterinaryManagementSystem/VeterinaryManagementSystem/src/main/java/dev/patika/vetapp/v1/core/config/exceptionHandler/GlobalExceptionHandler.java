@@ -1,9 +1,9 @@
-package dev.patika.vetapp.v1.core.config;
+package dev.patika.vetapp.v1.core.config.exceptionHandler;
 
+import dev.patika.vetapp.v1.core.exception.*;
 import dev.patika.vetapp.v1.core.result.Result;
 import dev.patika.vetapp.v1.core.result.ResultData;
 import dev.patika.vetapp.v1.core.utilities.ResultHelper;
-import dev.patika.vetapp.v1.core.exception.*;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
